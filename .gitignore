@@ -1,0 +1,9 @@
+.dart_tool/
+.packages
+build/
+*.apk
+*.aab
+*.jks
+*.keystore
+local.properties
+.git/
