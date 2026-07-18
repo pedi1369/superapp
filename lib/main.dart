@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'theme/app_theme.dart';
 import 'screens/dashboard/dashboard_screen.dart';
 import 'screens/wallet/wallet_screen.dart';
-import 'screens/auth/login_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
