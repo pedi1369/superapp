@@ -313,8 +313,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
       decoration: BoxDecoration(
         color: AppTheme.glassBg,
         borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: AppTheme.glassBorder),
-        borderRight: const BorderSide(color: AppTheme.primary, width: 4),
+        border: Border(
+          right: BorderSide(color: AppTheme.primary, width: 4),
+          top: BorderSide(color: AppTheme.glassBorder),
+          left: BorderSide(color: AppTheme.glassBorder),
+          bottom: BorderSide(color: AppTheme.glassBorder),
+        ),
       ),
       child: Row(
         children: [
@@ -358,16 +362,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
   // ═══════════════════════════════════
   Widget _buildServicesSection() {
     final services = [
-      _ServiceItem('📄', 'پرداخت قبض', const Color(0x1F8B5CF6)),
-      _ServiceItem('🚗', 'خلافی', const Color(0x1FF87171)),
-      _ServiceItem('📱', 'شارژ', const Color(0x1F34D399)),
-      _ServiceItem('📶', 'اینترنت', const Color(0x1FFBBF24)),
-      _ServiceItem('🎫', 'بلیط', const Color(0x1F60A5FA)),
-      _ServiceItem('🎁', 'دعوت', const Color(0x1FF472B8)),
-      _ServiceItem('🛡️', 'بیمه', const Color(0x1F34D399)),
-      _ServiceItem('💰', 'حواله', const Color(0x1FFF97316)),
-      _ServiceItem('📋', 'استعلام', const Color(0x1FA78BFA)),
-      _ServiceItem('🤖', 'AI', const Color(0x1F60A5FA)),
+      _ServiceItem('📄', 'پرداخت قبض', AppTheme.primary.withOpacity(0.12)),
+      _ServiceItem('🚗', 'خلافی', AppTheme.error.withOpacity(0.12)),
+      _ServiceItem('📱', 'شارژ', AppTheme.success.withOpacity(0.12)),
+      _ServiceItem('📶', 'اینترنت', AppTheme.warning.withOpacity(0.12)),
+      _ServiceItem('🎫', 'بلیط', const Color(0xFF60A5FA).withOpacity(0.12)),
+      _ServiceItem('🎁', 'دعوت', const Color(0xFFF472B8).withOpacity(0.12)),
+      _ServiceItem('🛡️', 'بیمه', AppTheme.success.withOpacity(0.12)),
+      _ServiceItem('💰', 'حواله', const Color(0xFFF97316).withOpacity(0.12)),
+      _ServiceItem('📋', 'استعلام', AppTheme.primaryLight.withOpacity(0.12)),
+      _ServiceItem('🤖', 'AI', const Color(0xFF60A5FA).withOpacity(0.12)),
     ];
 
     return Container(
